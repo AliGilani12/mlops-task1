@@ -6,6 +6,6 @@ WORKDIR /app
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY preprocess.py train.py .
+COPY preprocess.py train.py cleaned_iris.csv .
 
 CMD ["bash", "-c", "python preprocess.py && python train.py"]
